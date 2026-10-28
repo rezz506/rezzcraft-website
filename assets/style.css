@@ -247,3 +247,9 @@ details[open]::details-content { block-size: auto; }
 .form-msg { min-height: 1.4em; font-weight: 700; }
 .form-msg[data-state="ok"] { color: var(--go); }
 .form-msg[data-state="err"] { color: var(--warm); }
+
+/* Live map page: the embedded 3D map fills most of the screen; shorter on phones so the page still scrolls */
+.map-wrap { display: grid; gap: 1.25rem; }
+.map-frame { position: relative; height: min(78vh, 52rem); min-height: 22rem; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--raised); }
+.map-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+@media (max-width: 640px) { .map-frame { height: 62vh; } }
