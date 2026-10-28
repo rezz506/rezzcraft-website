@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RezzCraft Server Guide: Claims, Economy, Worlds &amp; Commands</title>
+<meta name="description" content="Everything you need to play on RezzCraft: land claims, homes, chest shops and the auction house, crates and voting, the five worlds, PvP, stargates and handy commands.">
+<link rel="canonical" href="https://www.rezzcraft.us/guide.html">
+<meta name="theme-color" content="#0e1511">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RezzCraft">
+<meta property="og:title" content="RezzCraft Server Guide: Claims, Economy, Worlds &amp; Commands">
+<meta property="og:description" content="Everything you need to play on RezzCraft: land claims, homes, chest shops and the auction house, crates and voting, the five worlds, PvP, stargates and handy commands.">
+<meta property="og:url" content="https://www.rezzcraft.us/guide.html">
+<meta property="og:image" content="https://www.rezzcraft.us/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RezzCraft Server Guide: Claims, Economy, Worlds &amp; Commands">
+<meta name="twitter:description" content="Everything you need to play on RezzCraft: land claims, homes, chest shops and the auction house, crates and voting, the five worlds, PvP, stargates and handy commands.">
+<meta name="twitter:image" content="https://www.rezzcraft.us/assets/img/og.jpg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="assets/img/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500;600&family=Pixelify+Sans:wght@500;600&display=swap">
+<script>/* Halloween look until the spawn decor comes down (Nov 9, 9:10 AM CT), then the cozy MOTD look. */
+if (Date.now() < Date.parse('2026-11-09T09:10:00-06:00')) document.documentElement.dataset.season = 'hallowed';</script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="RezzCraft home"><img src="assets/img/icon-64.png" alt="" width="26" height="26"><span class="grad">RezzCraft</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html">Home</a><a href="play.html">How to join</a><a href="guide.html" aria-current="page">Guide</a><a href="ranks.html">Ranks</a><a href="vote.html">Vote</a><a href="rules.html">Rules</a>
+      <a href="https://rezzcraft.buycraft.net/" rel="noopener">Store</a>
+      <a class="btn btn-gold" href="https://discord.gg/ZhuBYvDWTC" rel="noopener">Join Discord</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<header class="page-head"><div class="wrap"><span class="eyebrow">Server guide</span><h1 class="grad">How RezzCraft works</h1><p>The short version of everything on the server. In game, Rezz can answer anything this page doesn't: type <code>/rezz</code> and your question.</p></div></header>
+<section style="padding-top:1rem">
+  <div class="wrap">
+    <nav class="toc" aria-label="Guide sections"><a href="#getting-started">Getting started</a><a href="#claims">Land claims</a><a href="#homes">Homes and teleporting</a><a href="#economy">Money and trading</a><a href="#rewards">Crates, voting and daily rewards</a><a href="#worlds">The worlds</a><a href="#pvp">PvP, duels and the arena</a><a href="#stargates">Stargates</a><a href="#skills">Skills and fishing</a><a href="#more">Handy extras</a><a href="ranks.html">Ranks</a></nav>
+    <div class="guide">
+      <section id="getting-started" aria-labelledby="h-getting-started"><h2 id="h-getting-started">Getting started</h2><div class="prose"><ul><li>New players get a starter kit and starting cash. <code>/checklist</code> pays you for each step of learning the server, and finishing it pays a Vote Key.</li><li><code>/rtp</code> takes you somewhere open in the main world. <code>/spawn</code> brings you back. <code>/help</code> and <code>/guide</code> cover the basics.</li><li>Ask Rezz, our AI helper bot, anything with <code>/rezz</code> and your question. Only you see the answer.</li><li>Invited by a friend? <code>/refer</code> and their name in your first 48 hours rewards you both. <code>/wherefrom</code> tells us how you found us and gives you a reward too.</li></ul></div></section><section id="claims" aria-labelledby="h-claims"><h2 id="h-claims">Land claims</h2><div class="prose"><ul><li><code>/claimkit</code> gives you the claim tools and <code>/claiminfo</code> explains how claiming works. Claimed land is protected from breaking, building and chest opening.</li><li>You earn claim blocks by playing, and more from voting, daily rewards, ranks and crates. <code>/claimslist</code> shows your claims and blocks.</li><li><code>/trust</code> and a name lets a friend build with you. <code>/accesstrust</code> lets them use doors, buttons and beds only. <code>/untrust</code> removes them.</li><li><code>/claimborder</code> shows the edge of the claim you are standing in. <code>/abandonclaim</code> removes a claim and gives the blocks back.</li><li>You can claim in the main world, the nether and the End. The resource and creative worlds can't be claimed.</li></ul></div></section><section id="homes" aria-labelledby="h-homes"><h2 id="h-homes">Homes and teleporting</h2><div class="prose"><ul><li><code>/sethome</code> saves a home and <code>/home</code> takes you there. Earned and store ranks give you more homes.</li><li><code>/tpa</code> and a name asks to teleport to a friend. <code>/tpahere</code> asks them to come to you. They answer with <code>/tpaccept</code> or <code>/tpdeny</code>.</li><li><code>/warp</code> opens the warp menu with the resource, creative and hardcore worlds.</li></ul></div></section><section id="economy" aria-labelledby="h-economy"><h2 id="h-economy">Money and trading</h2><div class="prose"><ul><li><code>/sell</code> opens a menu where you sell items to the server, and <code>/shop</code> shows what the server buys and sells.</li><li>Make your own chest shop with <code>/chestshop create</code> while looking at a chest. <code>/chestshop browse</code> lists every player shop.</li><li><code>/ah</code> opens the auction house. <code>/orders</code> lets you post buy orders for items you want.</li><li>Rent a shop or a hotel room at spawn by right-clicking a rent sign.</li><li>Hire other players with contracts: <code>/contract create</code> posts a job, and the pay is held safely until the job is done.</li><li><code>/bal</code> shows your money, <code>/pay</code> sends money, and <code>/baltop</code> shows the richest players.</li></ul></div></section><section id="rewards" aria-labelledby="h-rewards"><h2 id="h-rewards">Crates, voting and daily rewards</h2><div class="prose"><ul><li>The crates are just east of spawn. Hold the matching key and right-click a crate to open it. Left-click to see what's inside.</li><li>Keys come from <a href="vote.html">voting</a>, the daily login streak (<code>/daily</code>), the starter checklist and ranking up. <code>/cratekeys</code> buys more with in-game money.</li><li>Every vote pays cash, claim blocks and a Vote Key. When the whole server reaches a vote goal, everyone online gets a vote party bonus.</li></ul></div></section><section id="worlds" aria-labelledby="h-worlds"><h2 id="h-worlds">The worlds</h2><div class="prose"><ul><li><strong>Main world, nether and End:</strong> where you build. Claims, homes and teleports work here, and PvP is off.</li><li><strong>Resource world</strong> (<code>/warp resource</code>): mine and gather without touching the main world. It shares your inventory. PvP is on here.</li><li><strong>Creative world</strong> (<code>/warp creative</code>): build freely with a separate inventory. Nothing comes back to survival.</li><li><strong>Hardcore world</strong> (<code>/warp hardcore</code>): separate inventory and PvP on. Die and you become a spectator until you earn your way back in with XP.</li></ul></div></section><section id="pvp" aria-labelledby="h-pvp"><h2 id="h-pvp">PvP, duels and the arena</h2><div class="prose"><ul><li><code>/ffa</code> drops you into the free-for-all arena with a kit. Your own items are kept safe and nothing is lost when you die there.</li><li><code>/duel</code> and a name challenges a player, with a kit or your own gear. <code>/queue</code> is ranked matchmaking with a rating.</li><li>Outside the arena, PvP is on only in the resource and hardcore worlds.</li></ul></div></section><section id="stargates" aria-labelledby="h-stargates"><h2 id="h-stargates">Stargates</h2><div class="prose"><ul><li>Players build their own stargates out of obsidian and a lever, then dial each other by name. <code>/stargatebook</code> has the build diagrams.</li><li>Public gates connect spawn, the main stronghold and the End.</li></ul></div></section><section id="skills" aria-labelledby="h-skills"><h2 id="h-skills">Skills and fishing</h2><div class="prose"><ul><li>Skills like mining, woodcutting and combat level up as you play. <code>/stats</code> shows yours and <code>/mctop</code> shows the leaderboards.</li><li>Any fishing rod can catch custom fish of different rarities. <code>/emf shop</code> sells them, and fishing contests start for everyone automatically.</li></ul></div></section><section id="more" aria-labelledby="h-more"><h2 id="h-more">Handy extras</h2><div class="prose"><ul><li><code>/ec</code> opens your ender chest anywhere. <code>/trash</code> throws items away. <code>/sort</code> turns on chest sorting.</li><li>The server has optional proximity voice chat: hear players near you. It needs a free mod; ask Rezz or Discord for the link.</li><li><code>/map</code> gives you the link to the <a href="http://rezzcraft.us:8100" rel="noopener">live 3D map</a>, which works on phone and PC.</li><li><code>/msg</code> sends a private message, <code>/mail</code> leaves one for someone offline, and <code>/ignore</code> hides a player's chat from you.</li></ul></div></section>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-links">
+      <a href="play.html">How to join</a><a href="guide.html">Server guide</a><a href="ranks.html">Ranks</a><a href="vote.html">Vote</a>
+      <a href="rules.html">Rules</a><a href="creators.html">Creators</a><a href="https://rezzcraft.buycraft.net/" rel="noopener">Store</a><a href="https://discord.gg/ZhuBYvDWTC" rel="noopener">Discord</a><a href="http://rezzcraft.us:8100" rel="noopener">Live map</a>
+    </div>
+    <p>Need help? Type <code>/ticket</code> in game, ask in our <a href="https://discord.gg/ZhuBYvDWTC" rel="noopener">Discord</a>, or email <span>support@rezzcraft.us</span>.</p>
+    <p class="fine">RezzCraft is a fan-run Minecraft server. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</p>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
