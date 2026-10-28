@@ -46,7 +46,7 @@
       .catch(function () { els.forEach(function (el) { el.querySelector('.label').textContent = 'Open 24/7'; }); });
   }
 
-  // Phone "Play now" bar: only after the first screen, and never while an address box is already visible.
+  // Phone "Play now" bar: only after the first screen, and never while an address box or the footer is visible.
   var bar = document.querySelector('.playbar');
   if (bar && 'IntersectionObserver' in window) {
     var visible = new Set();
@@ -55,7 +55,7 @@
       entries.forEach(function (e) { if (e.isIntersecting) visible.add(e.target); else visible.delete(e.target); });
       update();
     });
-    document.querySelectorAll('.plaque').forEach(function (p) { io.observe(p); });
+    document.querySelectorAll('.plaque, .site-foot').forEach(function (p) { io.observe(p); });
     window.addEventListener('scroll', update, { passive: true });
     update();
   }

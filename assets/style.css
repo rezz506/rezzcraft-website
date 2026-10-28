@@ -49,7 +49,7 @@
   --season-line: #5c2a3e;
 }
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scrollbar-gutter: stable; interpolate-size: allow-keywords; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
 body { margin: 0; background: var(--ground); color: var(--text); font: var(--step-0)/1.6 var(--body); -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; height: auto; display: block; }
@@ -201,6 +201,9 @@ details summary { cursor: pointer; font-weight: 700; font-size: 1.08rem; list-st
 details summary::after { content: "+"; font-family: var(--mono); color: var(--accent); }
 details[open] summary::after { content: "-"; }
 details p { margin-top: 0.6rem; color: var(--muted); max-width: 46rem; }
+/* answers open smoothly so the content below glides instead of jumping (browsers without support just open instantly) */
+details::details-content { block-size: 0; overflow: hidden; transition: block-size 0.25s ease, content-visibility 0.25s allow-discrete; }
+details[open]::details-content { block-size: auto; }
 
 .cta-band .wrap { display: grid; gap: 1.25rem; justify-items: start; }
 .page-head { padding-block: clamp(2.5rem, 7vw, 4.5rem) 1.5rem; }
