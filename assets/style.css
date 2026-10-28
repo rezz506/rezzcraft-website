@@ -233,3 +233,17 @@ details[open]::details-content { block-size: auto; }
 .playbar-discord { flex: none; color: var(--text); font-size: 0.9rem; text-decoration: none; padding: 0.4rem 0.2rem; }
 @media (min-width: 761px) { .playbar { display: none !important; } }
 @media (max-width: 440px) { .playbar-label { display: none; } .playbar code { font-size: 0.9rem; } }
+
+/* support ticket form */
+.ticket-form { gap: 1.1rem; }
+.field { display: grid; gap: 0.35rem; }
+.field label { font-weight: 700; }
+.field small { color: var(--muted); font-size: 0.85rem; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--text); background: var(--well); border: 1px solid var(--line); border-radius: 6px; padding: 0.65rem 0.75rem; }
+.field textarea { resize: vertical; min-height: 8rem; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+.ticket-form .btn { justify-self: start; }
+.ticket-form .btn:disabled { opacity: 0.6; cursor: wait; transform: none; }
+.form-msg { min-height: 1.4em; font-weight: 700; }
+.form-msg[data-state="ok"] { color: var(--go); }
+.form-msg[data-state="err"] { color: var(--warm); }

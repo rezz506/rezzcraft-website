@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RezzCraft Support | Send a Ticket to Staff</title>
+<meta name="description" content="Need help on the RezzCraft Minecraft server? Send a support ticket to staff for bugs, griefing, player reports, store questions or account problems.">
+<link rel="canonical" href="https://www.rezzcraft.us/support.html">
+<meta name="theme-color" content="#0e1511">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RezzCraft">
+<meta property="og:title" content="RezzCraft Support | Send a Ticket to Staff">
+<meta property="og:description" content="Need help on the RezzCraft Minecraft server? Send a support ticket to staff for bugs, griefing, player reports, store questions or account problems.">
+<meta property="og:url" content="https://www.rezzcraft.us/support.html">
+<meta property="og:image" content="https://www.rezzcraft.us/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RezzCraft Support | Send a Ticket to Staff">
+<meta name="twitter:description" content="Need help on the RezzCraft Minecraft server? Send a support ticket to staff for bugs, griefing, player reports, store questions or account problems.">
+<meta name="twitter:image" content="https://www.rezzcraft.us/assets/img/og.jpg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="assets/img/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500;600&family=Pixelify+Sans:wght@500;600&display=swap">
+<script>/* Halloween look until the spawn decor comes down (Nov 9, 9:10 AM CT), then the cozy MOTD look. */
+if (Date.now() < Date.parse('2026-11-09T09:10:00-06:00')) document.documentElement.dataset.season = 'hallowed';</script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="RezzCraft home"><img src="assets/img/icon-64.png" alt="" width="26" height="26"><span class="grad">RezzCraft</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="play.html">How to join</a><a href="guide.html">Guide</a><a href="ranks.html">Ranks</a><a href="vote.html">Vote</a><a href="rules.html">Rules</a><a href="support.html" aria-current="page">Support</a>
+      <a href="https://rezzcraft.buycraft.net/" rel="noopener">Store</a>
+      <a class="btn btn-gold" href="https://discord.gg/ZhuBYvDWTC" rel="noopener">Join Discord</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<header class="page-head"><div class="wrap"><span class="eyebrow">Support</span><h1 class="grad">Send us a ticket</h1><p>Bugs, griefing, player reports, store or rank problems: tell us here and staff will follow up. In game, <code>/ticket</code> works too.</p></div></header>
+<section style="padding-top:1rem">
+  <div class="wrap split">
+    <form class="panel ticket-form" id="ticket-form" novalidate>
+      <div class="field"><label for="t-mc">Minecraft name</label><input id="t-mc" name="mc" required maxlength="17" autocomplete="off" placeholder="Steve_99 or .BedrockName"><small>Bedrock players: include the dot at the start.</small></div>
+      <div class="field"><label for="t-discord">Discord username <span class="muted">(optional)</span></label><input id="t-discord" name="discord" maxlength="32" autocomplete="off" placeholder="so staff can message you"></div>
+      <div class="field"><label for="t-cat">What is it about?</label>
+        <select id="t-cat" name="category" required><option value="">Pick one</option><option value="bug">Bug or glitch</option><option value="grief">Griefing or theft</option><option value="player">Player report</option><option value="store">Store or payment</option><option value="account">Account or rank</option><option value="other">Something else</option></select></div>
+      <div class="field"><label for="t-msg">What happened?</label><textarea id="t-msg" name="message" required minlength="15" maxlength="1500" rows="6" placeholder="Where were you, what happened, and when? Coordinates help."></textarea><small><span id="t-count">0</span> / 1,500</small></div>
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAFpFlrJHj4ykc4-h" data-theme="dark"></div>
+      <button class="btn btn-gold" type="submit" id="t-send">Send ticket</button>
+      <p class="form-msg" id="t-msg-out" role="status" aria-live="polite"></p>
+    </form>
+    <div class="prose">
+      <h2 style="font-size:var(--step-2)">How replies work</h2>
+      <ul>
+        <li>Your ticket opens a private ticket for the staff team, the same as <code>/ticket</code> in game.</li>
+        <li>Staff replies show up in game the next time you're online. Answer them with <code>/treply</code>.</li>
+        <li>Left your Discord username? Staff may message you there too.</li>
+      </ul>
+      <p class="muted fine">We only use what you type here to answer your ticket. Don't include passwords, your real name, age or address. A spam check from Cloudflare runs on this form.</p>
+    </div>
+  </div>
+</section>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>
+(function () {
+  var f = document.getElementById('ticket-form'), out = document.getElementById('t-msg-out'), btn = document.getElementById('t-send');
+  var msg = document.getElementById('t-msg'), count = document.getElementById('t-count');
+  msg.addEventListener('input', function () { count.textContent = msg.value.length; });
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var tokenEl = f.querySelector('[name="cf-turnstile-response"]');
+    var data = { mc: f.mc.value.trim(), discord: f.discord.value.trim(), category: f.category.value, message: msg.value.trim(), token: tokenEl ? tokenEl.value : '' };
+    if (!data.token) { out.textContent = 'Please wait for the spam check to finish, then send again.'; out.dataset.state = 'err'; return; }
+    btn.disabled = true; btn.textContent = 'Sending...'; out.textContent = ''; out.dataset.state = '';
+    fetch('https://rezzcraft-tickets.rezzcraft.workers.dev/ticket', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.ok) { f.reset(); count.textContent = '0'; out.dataset.state = 'ok'; out.textContent = 'Sent! Your ticket number is ' + d.id + '. Staff will follow up soon.'; }
+        else { out.dataset.state = 'err'; out.textContent = d.error || 'Something went wrong. Please try again.'; }
+      })
+      .catch(function () { out.dataset.state = 'err'; out.textContent = "We couldn't reach the ticket system. Try /ticket in game or our Discord."; })
+      .then(function () { btn.disabled = false; btn.textContent = 'Send ticket'; if (window.turnstile) window.turnstile.reset(); });
+  });
+})();
+</script>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-links">
+      <a href="play.html">How to join</a><a href="guide.html">Server guide</a><a href="ranks.html">Ranks</a><a href="vote.html">Vote</a>
+      <a href="rules.html">Rules</a><a href="support.html">Support</a><a href="creators.html">Creators</a><a href="https://rezzcraft.buycraft.net/" rel="noopener">Store</a><a href="https://discord.gg/ZhuBYvDWTC" rel="noopener">Discord</a><a href="http://rezzcraft.us:8100" rel="noopener">Live map</a>
+    </div>
+    <p>Need help? <a href="support.html">Send us a ticket</a>, type <code>/ticket</code> in game, ask in our <a href="https://discord.gg/ZhuBYvDWTC" rel="noopener">Discord</a>, or email <span>support@rezzcraft.us</span>.</p>
+    <p class="fine">RezzCraft is a fan-run Minecraft server. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</p>
+  </div>
+</footer>
+<div class="playbar" hidden><span class="playbar-label">Play now</span><code>mc.rezzcraft.us</code><button class="btn btn-gold" type="button" data-copy="mc.rezzcraft.us">Copy IP</button><a class="playbar-discord" href="https://discord.gg/ZhuBYvDWTC" rel="noopener">Discord</a></div>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
