@@ -215,3 +215,18 @@ details p { margin-top: 0.6rem; color: var(--muted); max-width: 46rem; }
 .foot-links a { color: var(--text); text-decoration: none; }
 .foot-links a:hover { color: var(--accent); }
 .fine { font-size: 0.85rem; max-width: 46rem; }
+
+/* join block at the bottom of inner pages */
+.join-block .wrap { display: grid; gap: 1.5rem; }
+.join-block .ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+/* phone-only "Play now" bar: shows after the first screen, hides while an address box is on screen */
+.playbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 8; display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.6rem max(12px, env(safe-area-inset-right, 0px)) calc(0.6rem + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
+  background: rgba(var(--ground-rgb), 0.96); backdrop-filter: blur(8px); border-top: 1px solid var(--line); box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.35); }
+.playbar-label { font: 600 0.72rem/1.1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--warm); flex: none; }
+.playbar code { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; color: var(--accent); background: var(--well); padding: 0.45rem 0.55rem; font-size: 0.95rem; }
+.playbar .btn { flex: none; padding: 0.6rem 0.8rem; font-size: 0.92rem; box-shadow: none; }
+.playbar-discord { flex: none; color: var(--text); font-size: 0.9rem; text-decoration: none; padding: 0.4rem 0.2rem; }
+@media (min-width: 761px) { .playbar { display: none !important; } }
+@media (max-width: 440px) { .playbar-label { display: none; } .playbar code { font-size: 0.9rem; } }

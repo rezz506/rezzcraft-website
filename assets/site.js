@@ -46,6 +46,20 @@
       .catch(function () { els.forEach(function (el) { el.querySelector('.label').textContent = 'Open 24/7'; }); });
   }
 
+  // Phone "Play now" bar: only after the first screen, and never while an address box is already visible.
+  var bar = document.querySelector('.playbar');
+  if (bar && 'IntersectionObserver' in window) {
+    var visible = new Set();
+    var update = function () { bar.hidden = !(window.scrollY > window.innerHeight * 0.8 && visible.size === 0); };
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) visible.add(e.target); else visible.delete(e.target); });
+      update();
+    });
+    document.querySelectorAll('.plaque').forEach(function (p) { io.observe(p); });
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }
+
   // Seasonal strips hide themselves after their end date (data-until="YYYY-MM-DD").
   document.querySelectorAll('[data-until]').forEach(function (el) {
     var until = new Date(el.getAttribute('data-until') + 'T23:59:59-06:00');
