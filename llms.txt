@@ -1,0 +1,36 @@
+# RezzCraft
+
+> RezzCraft is a free, cozy, semi-vanilla Minecraft survival server for Java and Bedrock players, who share the same world. Claim land, build a home, trade with neighbors and climb ranks earned by playing. Never pay-to-win.
+
+## How to join
+
+- Server address: mc.rezzcraft.us (Java and Bedrock)
+- Bedrock (phone, Windows, console): same address, port 19132. On Xbox, PlayStation and Switch, adding your own servers takes a few extra steps; the Discord helps.
+- Use the latest version of Minecraft Java or Bedrock. No mods needed.
+- Step-by-step guide: https://www.rezzcraft.us/play.html
+
+## What players get
+
+- Land claims: claimed builds cannot be broken, opened or taken by others.
+- A player economy: sell to the server, chest shops, an auction house, buy orders and player contracts.
+- Nine ranks plus prestige, all earned with in-game money and time played: https://www.rezzcraft.us/ranks.html
+- Crates and daily rewards for voting, daily logins and the starter checklist: https://www.rezzcraft.us/vote.html
+- Player-built portal gates, skills, custom fishing and fishing contests.
+- Five worlds: main world (with nether and End), a resource world, a creative world and a hardcore world.
+- PvP is off in the main world, nether and End; it is on in the arena, duels, the resource world and the hardcore world.
+- Rezz, an AI helper bot, answers questions in game chat; staff and regulars help too.
+- A 3D live map of the server: https://www.rezzcraft.us/map.html
+
+## Rules (short version)
+
+Be respectful; no politics or controversial topics; no hacking; no griefing, base camping or forced PvP; don't abuse bugs. Full rules: https://www.rezzcraft.us/rules.html
+
+## Store
+
+Optional. It sells cosmetics and convenience perks only, never gear, game money or claim blocks: https://rezzcraft.buycraft.net/
+
+## Help and community
+
+- Discord (200+ members): https://discord.gg/ZhuBYvDWTC
+- Support tickets: https://www.rezzcraft.us/support.html, /ticket in game, or support@rezzcraft.us
+- Content creators: https://www.rezzcraft.us/creators.html
