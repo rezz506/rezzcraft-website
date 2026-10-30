@@ -29,6 +29,10 @@ Be respectful; no politics or controversial topics; no hacking; no griefing, bas
 
 Optional. It sells cosmetics and convenience perks only, never gear, game money or claim blocks: https://rezzcraft.buycraft.net/
 
+## Bounty Board
+
+At spawn, about 50 blocks west of /spawn (-73 67 84), or type /bounties anywhere: daily quests, rotating bounties, Rare Bounties, questlines and Head Hunts. Rewards include 8 trophies, 9 titles and the Golden Balloon, all earned and never sold. Page: https://www.rezzcraft.us/bounty-board.html
+
 ## Help and community
 
 - Discord (200+ members): https://discord.gg/ZhuBYvDWTC
