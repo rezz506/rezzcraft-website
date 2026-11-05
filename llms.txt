@@ -1,6 +1,6 @@
 # RezzCraft
 
-> RezzCraft is a free, cozy, semi-vanilla Minecraft survival server for Java and Bedrock players, who share the same world. Claim land, build a home, trade with neighbors and climb ranks earned by playing. Never pay-to-win.
+> RezzCraft is a free, cozy, semi-vanilla Minecraft survival server for Java and Bedrock players, who share the same world. It has never been wiped: same map since 2021, so what you build lasts. Claim land, build a home, trade with neighbors and climb ranks earned by playing. Never pay-to-win.
 
 ## How to join
 
